@@ -44,7 +44,7 @@ bash NVIDIA-Linux-x86_64-XXX.XX.run
 # A pasta claymore e os arquivos nvidia-overclock_x11.sh e settings.conf devem estar em /root
 
 ## Passo 1 - Copiar scripts
-Copie os scripts abaixo para /usr/bin
+# Copie os scripts abaixo para /usr/bin
 miner-init
 miner-start
 miner-stop
