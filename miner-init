@@ -1,0 +1,7 @@
+#!/bin/bash
+# Rodar na primeira fez para identificar todas as placas e ativar o overclock em todas elas
+# A linha abaixo funciona nas 1060
+nvidia-xconfig -a --cool-bits=28 --allow-empty-initial-configuration
+
+# Caso tenha algum problema para identificar todas rode a linha abaixo
+# nvidia-xconfig --enable-all-gpus --separate-x-screens -a --cool-bits=28 --allow-empty-initial-configuration

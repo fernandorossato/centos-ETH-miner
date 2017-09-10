@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+# Load global settings settings.conf
+if ! source /root/settings.conf; then
+        echo "FAILURE: Can not load global settings 'settings.conf'"
+        exit 9
+fi
+
+#Open socket.
+exec 3<>/dev/tcp/127.0.0.1/3333
+
+#Send msg.
+echo -n '{"id":0,"jsonrpc":"2.0","method":"miner_getstat1"}' >&3
+
+
+#Receive msg.
+read -r msg_in <&3
+RET=`echo "$msg_in" | jq -r '.result'`
+
+# Results in Array
+myarr=($(echo $RET | tr -d [ | tr -d ] | tr -d \" | awk -F, '{ print $1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12}'))
+
+VERSION=${myarr[0]}
+secs=$((${myarr[3]}*60))
+#TIME=`date -d@${secs} -u +%H:%M`
+TIME=`printf '%dd %02d:%02d' $(($secs/60/60/24)) $(($secs/60/60%24)) $(($secs/60%60))`
+TOTAL=${myarr[4]}
+#GPUS=($(echo ${myarr[5]} | tr ";" " ")) #Array
+GPUS=$(echo ${myarr[5]} | tr ";" "\t")
+INVALIDS=`echo ${myarr[10]} | awk -F ";" '{ print $1 }'`
+#echo "--------------------------------------------------";
+echo "Status do Mineiro $MY_RIG"
+echo "Claymore's versão $VERSION"
+echo ""
+echo "Time    ,Speed,S,R" | tr "," "\t"
+echo "$TIME;$TOTAL" | tr ";" "\t"
+echo ""
+echo "Speed por GPU (Mh/s)"
+echo "$GPUS"
+echo ""
+echo "Total de invalid shares: $INVALIDS"
+
+echo ""
+echo "Status das placas"
+/usr/bin/nvidia-status
+#echo "--------------------------------------------------";
+#echo ${GPUS[1]}
+#for i in "${GPUS[@]}"
+#do
+#   :
+#  echo $i
+#done

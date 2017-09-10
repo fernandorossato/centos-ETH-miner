@@ -1,0 +1,1 @@
+@reboot sleep 60 && /root/miner.sh

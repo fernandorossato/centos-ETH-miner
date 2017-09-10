@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "GPU,Driver,Temp.,Fan,Power,G.Clock,M.Clock,M.Uso" | tr "," "\t"
+nvidia-smi --format=csv,noheader --query-gpu=index,driver_version,temperature.gpu,fan.speed,power.draw,clocks.gr,clocks.mem,memory.used | tr -d [:blank:] | tr "," "\t"
+
+#echo "$RET" | awk -F, '{ print $1 "\t" $2 "\t" $3 "\t" $4 "\t" $5 "\t" $6 "\t" $7}'

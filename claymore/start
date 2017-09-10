@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Load global settings settings.conf
+if ! source /root/settings.conf; then
+	echo "FAILURE: Can not load global settings 'settings.conf'"
+	exit 9
+fi
+
+export GPU_FORCE_64BIT_PTR=0
+export GPU_MAX_HEAP_SIZE=100
+export GPU_USE_SYNC_OBJECTS=1
+export GPU_MAX_ALLOC_PERCENT=100
+export GPU_SINGLE_ALLOC_PERCENT=100
+
+./ethdcrminer64 -mode 1 -dbg -1 -epool $MY_POOL -ewal $MY_ADDRESS.$MY_RIG -epsw x &
