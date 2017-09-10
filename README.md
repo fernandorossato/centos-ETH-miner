@@ -45,11 +45,17 @@ bash NVIDIA-Linux-x86_64-XXX.XX.run
 
 ## Passo 1 - Copiar scripts
 # Copie os scripts abaixo para /usr/bin
+
 miner-init
+
 miner-start
+
 miner-stop
+
 miner-monitor
+
 miner-status
+
 nvidia-status
 
 # Passo 2 - Identificar e configurar as placas
