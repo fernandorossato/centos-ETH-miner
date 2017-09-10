@@ -41,6 +41,7 @@ blacklist nouveau
     
 # Faça um Backup do seu initramfs gere um novo
 mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
+
 dracut /boot/initramfs-$(uname -r).img $(uname -r)
 
 reboot
