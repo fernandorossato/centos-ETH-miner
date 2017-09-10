@@ -4,11 +4,8 @@
 ########### Desenvolvido por Fernando Rossato <fer.rossato@gmail.com>    #
 ###########                                                              #
 ##########################################################################
-# Esse minerador é uma junção de alguns scripts com alguns que criei para 
-# automatizar a mineração de ETH com o Claymore's no CentOS 7. Não tenho
-# intenção de vender ou dar suporte nesses scripts, modifique a vontade
-# por sua conta em risco
-# Eu instalei a versão do CentOS 7 Gnome live e o drive da nvidia
+# Esse minerador é uma junção de alguns scripts com alguns que criei para automatizar a mineração de ETH com o Claymore's no CentOS 7. Não tenho intenção de vender ou dar suporte nesses scripts, modifique a vontade por sua conta em risco
+# Eu instalei a versão do CentOS 7 Gnome live e o drive da nvidia.
 # Para instalar o Drive da Nvidia e preparar o sistema faça o seguinte:
 # Baixe o drive do site da Nvidia
 # Execute:
@@ -90,8 +87,7 @@ Acesse pelo navegador http://IP_MINEIRO:3333
 miner-stop
 
 #####################################################################################################################
-Leituras adicionais, não precisa executar os comandos abaixo, são apenas referencias que usei para fazer os scripts,
-caso tenha algum problem talvez esses links e comandos podem te ajudar.
+# Leituras adicionais, não precisa executar os comandos abaixo, são apenas referencias que usei para fazer os scripts, caso tenha algum problem talvez esses links e comandos podem te ajudar.
 
 # Ativar overclock
 nvidia-xconfig -a --cool-bits=28 --allow-empty-initial-configuration
