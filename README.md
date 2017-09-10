@@ -4,7 +4,7 @@
 ########### Desenvolvido por Fernando Rossato <fer.rossato@gmail.com>    #
 ###########                                                              #
 ##########################################################################
-# Esse minerador é uma junção de alguns scripts com alguns que criei para automatizar a mineração de ETH com o Claymore's no CentOS 7. Não tenho intenção de vender ou dar suporte nesses scripts, modifique a vontade por sua conta em risco
+# Esse minerador é uma junção de alguns scripts com alguns que criei para automatizar a mineração de ETH com o Claymore's no CentOS 7. Depois de fazer a "Parte 1" pode seguir via SSH que a ideia é fazer tudo remoto mesmo. Não tenho intenção de vender ou dar suporte nesses scripts, modifique a vontade por sua conta em risco
 # Eu instalei a versão do CentOS 7 Gnome live e o drive da nvidia.
 # Para instalar o Drive da Nvidia e preparar o sistema faça o seguinte:
 # Baixe o drive do site da Nvidia
@@ -17,7 +17,7 @@ yum update
 
 reboot
 
-# Depois siga com:
+# Parte 1 - Instalação de dependencias e serviços
 yum -y groupinstall "GNOME Desktop" "Development Tools"
 
 yum -y install epel-release
