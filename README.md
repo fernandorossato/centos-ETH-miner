@@ -75,7 +75,8 @@ miner-init
 Execute:
 nvidia-status
 
-# Passo 4 - Configurar
+# Passo 4 - Configurar - Se quiser ajudar o amigo aqui, deixe minerando um tempo com os dados da minha pool!
+# Configuração da pool, conta e overclock. 
 Edite:
 settings.conf
 
