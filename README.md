@@ -15,6 +15,10 @@ setenforce 0
 
 yum update
 
+systemctl enable sshd
+
+systemctl set-default multi-user.target
+
 reboot
 
 # Parte 1 - Instalação de dependencias e serviços
@@ -22,13 +26,8 @@ yum -y groupinstall "GNOME Desktop" "Development Tools"
 
 yum -y install epel-release
 
-yum -y install kernel-devel
+yum -y install kernel-devel dkms jq
 
-systemctl enable sshd
-
-systemctl set-default multi-user.target
-
-yum -y install dkms
 
 # Edite /etc/default/grub. Adicione a string abaixo em “GRUB_CMDLINE_LINUX”
 rd.driver.blacklist=nouveau nouveau.modeset=0
