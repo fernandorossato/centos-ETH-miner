@@ -1,13 +1,20 @@
-##########################################################################
-###########                                                              #
-########### Minerador de ETH                                             #
-########### Desenvolvido por Fernando Rossato <fer.rossato@gmail.com>    #
-###########                                                              #
-##########################################################################
-# Esse minerador é uma junção de alguns scripts com alguns que criei para automatizar a mineração de ETH com o Claymore's no CentOS 7. Depois de fazer a "Parte 1" pode seguir via SSH que a ideia é fazer tudo remoto mesmo. Não tenho intenção de vender ou dar suporte nesses scripts, modifique a vontade por sua conta em risco
-# Eu instalei a versão do CentOS 7 Gnome live e o drive da nvidia.
-# Para instalar o Drive da Nvidia e preparar o sistema faça o seguinte:
-# Baixe o drive do site da Nvidia
+# Esse minerador é uma junção de alguns scripts com alguns que criei para automatizar a mineração de ETH com o Claymore's ou ethermine no CentOS 7.
+
+# Baixe o arquivo https://mega.nz/#!Sw9nXDxQ!Wz__hoaQ73LcFNlBQJKZmiXqigF08yFSSmrY7NHdxHQ e grave na sua pendrive ou HD
+
+# Eu utilizei o ImageUSB que você pode baixar de https://imageusb.br.uptodown.com/windows/download
+
+# Instalação Manual
+Os passos abaixo são se você quiser fazer a instalação manualmente que você não precisa, só usar a imagem pronto que está aqui no repositório
+
+Depois de fazer a "Parte 1" pode seguir via SSH que a ideia é fazer tudo remoto mesmo. Não tenho intenção de vender ou dar suporte nesses scripts, modifique a vontade por sua conta em risco.
+
+Eu instalei a versão do CentOS 7 Gnome live e o drive da nvidia.
+
+Para instalar o Drive da Nvidia e preparar o sistema faça o seguinte:
+
+Baixe o drive do site da Nvidia
+
 # Execute:
 setenforce 0
 

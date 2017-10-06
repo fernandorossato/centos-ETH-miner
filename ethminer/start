@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Load global settings settings.conf
+if ! source /root/settings.conf; then
+        echo "FAILURE: Can not load global settings 'settings.conf'"
+        exit 9
+fi
+
+export GPU_FORCE_64BIT_PTR=0
+export GPU_MAX_HEAP_SIZE=100
+export GPU_USE_SYNC_OBJECTS=1
+export GPU_MAX_ALLOC_PERCENT=100
+export GPU_SINGLE_ALLOC_PERCENT=100
+
+
+./ethminer -v 0 --api-port -3333 --farm-recheck 2000 -RH -U -S $MY_POOL -FS us1.ethermine.org:4444 -O $MY_ADDRESS.$MY_RIG &
